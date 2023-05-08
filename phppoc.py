@@ -11,7 +11,9 @@ with open("cacti.txt", 'r') as file:
         try:
             r = requests.get(url)
             if r.text == 'false':
-                print ("command should've executed! nice.")
+                with open('result3.txt', 'a') as file1:
+                    file1.write(baseurl+'\n')
+                file1.close()
             if('uid=' in r.text and 'gid=' in r.text):
                 with open('result2.txt', 'a') as file1:
                     file1.write(baseurl+'\n')
