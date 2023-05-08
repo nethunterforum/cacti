@@ -1,6 +1,4 @@
 import requests
-import sys
-
 
 with open("cacti.txt", 'r') as file:
     for line in file:
