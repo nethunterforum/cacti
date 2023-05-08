@@ -1,10 +1,5 @@
 import requests
-import urllib3
 import sys
-
-import threading
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def main():
     filea = sys.argv[1]
